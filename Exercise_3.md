@@ -33,7 +33,7 @@ title: Using a Visualforce page in a Lightning Experience page
 
 ### Step 3 - Modify the markup to match SLDS
 1. Open the Dev Console, and choose **File > Open Resource**, then choose the **Similar_Properties.vfp** page.
-2. Select the contents of the page and replace it with the [contents of this page](https://raw.githubusercontent.com/garazi/LightningAdoptionWorkshop/master/Exercise_3/src/pages/Similar_Properties.page).
+2. Select the contents of the page and replace it with the [contents of this page](https://raw.githubusercontent.com/developerforce/LightningNowWorkshop/master/Exercise_3/src/pages/Similar_Properties.page).
 3. Save the page, then reload the Property Record Detail page.
 4. (Optional) Follow the instructions from Step 2 to go back and remove the **Similar Properties** section that you created.
 

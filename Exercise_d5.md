@@ -14,7 +14,7 @@ Console apps in Lightning Experience have much of the same console functionality
 
 #### Create New App with App Manager
 
-1. Setup | App Manager | New Lightning App 
+1. Setup > App Manager > New Lightning App 
     1. App Details & Branding 
         1. Name: Dreamhouse Console 
         2. Developer Name: Dreamhouse_Console
@@ -76,10 +76,10 @@ Let's explore the new Lightning Console App! Navigate to the new app in the App 
 
 Now that we've created our new Lightning Console app, lets take a look at it and customize the experience even more with the Property record page. With Lightning App Builder Admins can create a record page from scratch, or make a copy of an existing record page right. Give your users a customized view for each object’s records by adding, editing, or removing components to change the page’s layout, and you can customize your users’ experience even more granularly by creating custom record pages and assigning them by app, record type, and user profile. We are going to make changes to the Property page using Standard Lightning Components and assign this customized Property Record page to the Lightning Console app we just created. ![screenshot](images/ex5.1.gif)
 
-1. App Launcher | Dreamhouse Console | Properties Tab (may be a drop-down)
+1. App Launcher > Dreamhouse Console > Properties Tab (may be a drop-down)
     1. Open a Property Record page
     2. Click through the tabs on this page, notice how the page is organized including the details page layout, the activity tab, and the related lists. 
-    3. Setup | Edit Page to enter the Lightning App Builder page 
+    3. Setup > Edit Page to enter the Lightning App Builder page 
         1. Drag the Path Component onto the page below the Highlights Panel 
     4. Select Details Tab and in the right sidebar, select Add Tab
         1. For new tab label select Custom Tab and type “Analytics”

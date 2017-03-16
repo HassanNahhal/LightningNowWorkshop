@@ -206,7 +206,7 @@ title: Modifying the Visualforce Markup for Lightning Experience
 2. Save the page and reload the page in your org.
 3. Switch to Salesforce Classic to see the page rendered with the Classic styling.
 4. Switch back to Lightning.
-5. If, for some reason, you were unsuccessful with the exercise delete the entire contents of the page, and replace it with the contents (Select All / Copy) of [this page](https://raw.githubusercontent.com/garazi/LightningAdoptionWorkshop/master/Exercise_2/src/pages/DreamhouseLeads.page).
+5. If, for some reason, you were unsuccessful with the exercise delete the entire contents of the page, and replace it with the contents (Select All / Copy) of [this page](https://raw.githubusercontent.com/developerforce/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads.page).
 
 
 <div class="row" style="margin-top:40px;">

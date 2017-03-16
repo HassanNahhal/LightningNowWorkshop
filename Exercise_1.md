@@ -11,7 +11,7 @@ title: Styling a Visualforce page for Lightning Experience
 ### Step 1 - Examine the Visualforce markup
 1. Click on the Setup icon and open the Developer Console.
 2. Choose File > Open Resource.
-3. In the Search field, type "Dreamhouse" and select the Visualforce page named "DreamhouseLeads.vfp".
+3. In the Search field, type "Dreamhouse" and select the Visualforce page named **DreamhouseLeads.vfp**.
 4. Notice this is a simple Visualforce page which displays a list of Leads.
 5. Using Chrome, navigate to the custom Leads page in your org.
 6. Right-click on the data table in the page and choose Inspect.
