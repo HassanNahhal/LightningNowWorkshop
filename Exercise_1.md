@@ -1,38 +1,49 @@
 ---
 layout: module
 exercise: Exercise 1
-title: Styling a Visualforce page for Lightning Experience
+title: Styling a Visualforce page for the Lightning Experience
 ---
 
-### Exercise Goals
-* Understand how to quickly add the Lightning look and feel to an existing Visualforce page
-* Add SLDS styles to the page
+### Objectives
 
-### Step 1 - Examine the Visualforce markup
-1. Click on the Setup icon and open the Developer Console.
-2. Choose File > Open Resource.
-3. In the Search field, type "Dreamhouse" and select the Visualforce page named **DreamhouseLeads.vfp**.
-4. Notice this is a simple Visualforce page which displays a list of Leads.
-5. Using Chrome, navigate to the custom Leads page in your org.
-6. Right-click on the data table in the page and choose Inspect.
-7. Locate the `<table>` tag and notice it has a class of **list**. Classes are CSS rules that define the look of the items on the page.
+In this exercise you will learn:
+* How to run the same Visualforce page in Salesforce Classic and in the Lightning Experience
+* What are areas of attention when running the same Visualforce page in the two environments
+* How to add Salesforce Lightning Design System (SLDS) styles to a Visualforce page
 
-### Step 2 - Add the Salesforce Lightning Design System CSS
-1. Switch back to the Developer Console.
-2. Add a directive to include the CSS from SLDS in the page by adding a new line after the opening `<apex:page>` tag:
+### Step 1 - Run the Leads Visualforce Page in Salesforce Classic
+
+1. If you are currently using the Lightning Experience, switch back to **Salesforce Classic**.
+1. Select the **Dreamhouse Classic application** and click the **Leads** tab. This is a simple Visualforce page displaying a list of Leads. 
+
+### Step 2 - Run the Leads Visualforce Page in the Lightning Experience
+
+1. Switch back to the **Lightning Experience**.
+1. Click the **Leads** tab. The page works but has the Salesforce Classic look and feel.
+1. Right-click on the data table in the page and click **Inspect**.
+1. Locate the `<table>` tag and notice it has a **list** class. Classes are CSS rules that define the look of the items on the page.
+
+### Step 3 - Style the Visualforce Page with the Salesforce Lightning Design System
+
+1. Click on the **Gear** icon (upper right corner) and select **Developer Console**.
+1. Choose File > Open > Pages, select **DreamhouseLeads**. and click **Open**. Familiarize yourself with the code.
+1. Add the following directive on the line after the opening `<apex:page>` tag to include the Salesforce Lightning Design System (SLDS) style sheet:
 
 		<apex:slds />
 		
-3. Wrap the `<apex:pageBlock>` tag with a `<div>` with a class of **slds-scope**:
+1. Wrap the `<apex:pageBlock>` tag with the following `div` tag:
 
 		<div class="slds-scope"> ... </div>
 		
-4. Add the following to the `<apex:page>` tag:
+1. Add the following attributes to the `<apex:page>` tag:
 
 		standardStylesheets="false" applyBodyTag="false"
 		
-5. Add `styleClass="slds-table slds-table--bordered slds-table--cell-buffer"` to the `<apex:pageBlockTable>` tag. 
-6. Save the page, and refresh it in the browser. You can see that styles have begun to be applied from SLDS.
+1. Add `styleClass="slds-table slds-table--bordered slds-table--cell-buffer"` to the `<apex:pageBlockTable>` tag. 
+1. Save the page. Go back to the **Leads** tab and refresh the page. You can see that SLDS styles have begun to be applied.
+1. Switch back to **Salesforce Classic** and click the **Leads** tab again. Note that you now have Lightning styles within your Salesforce Classic environment. 
+We will address that issue in the next exercise.
+
 		
 
 <div class="row" style="margin-top:40px;">
