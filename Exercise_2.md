@@ -1,122 +1,90 @@
 ---
 layout: module
 exercise: Exercise 2
-title: Modifying the Visualforce Markup for Lightning Experience
+title: Conditionally Rendering Visualforce Pages for the Underlying UX Environment
 ---
 
-### Exercise Goals
+### Objectives
+In this exercise you will learn how to:
 
-* Understand how to modify a page for display in Salesforce Classic and Lightning Experience
-* Become familiar with the components and utility classes of the Salesforce Lightning Design System
-* Understand how to use the markup from SLDS in a Visualforce page when rendered in Lightning Experience
+* Identify which UX environment (Classic or Lightning Experience) a page is running in
+* Add conditional rendering logic to a page to provide the native look and feel for the UX environment the page is running in  
+* Use the Salesforce Lightning Design System markup and styles
+
 
 ### Step 1 - Add Conditional Logic to the page
 
-1. In the Developer Console, open the Leads page from the previous exercise if it is not already open.
-2. Remove the `styleClass="slds-table slds-table--bordered slds-table--cell-buffer"` that you added to the `<apex:pageBlockTable>` in the previous exercise.
-3. Remove the `<apex:slds />` tag.
-4. Remove the opening and closing `<div class="slds-scope">` tags.
-5. Add a new line after the opening `<apex:page>` tag, and add the following:
+1. In the Developer Console, open the **DreamhouseLeads** page.
+1. Remove the `styleClass="slds-table slds-table--bordered slds-table--cell-buffer"` that you added to the `<apex:pageBlockTable>` in the previous exercise.
+1. Remove the `<apex:slds />` tag.
+1. Remove the opening and closing `<div class="slds-scope">` tags.
+1. Add a new line after the opening `<apex:page>` tag, and add the following variable definition:
  
     ```html
-	<apex:variable var="lightningDesktop" value="{! $User.UIThemeDisplayed == 'Theme4d'}" />
+	<apex:variable var="lightningDesktop" value="{! $User.UIThemeDisplayed=='Theme4d'}" />
 	```
 
-6. Wrap the **contents** of the `<apex:pageBlock>` with:
+1. Wrap the `<apex:pageBlock>` with the following tag to render it only when the page is running in Salesforce Classic:
 
     ```html
 	<apex:outputPanel rendered="{! !lightningDesktop}"> ... </apex:outputPanel>
     ```
 
-7. Add a reference to the Classic stylesheets on a new line in the **first** `<apex:outputPanel>`:
+1. Paste the following code immediately after the closing `</apex:outputPanel>` tag. This block will only be rendered when the page is running in the Lightning Experience:
 
 	```html
-	<link class="user" href="/sCSS/38.0/sprites/1245343872000/Theme3/default/elements.css" rel="stylesheet" type="text/css" />
-    <link  href="/sCSS/38.0/sprites/1251310209000/Theme3/dStandard.css" rel="stylesheet" type="text/css" />
-	```
-    
-9. Save the page.
-10. If you are unsure that your markup is correct, then, in the Dev Console, select all and delete. Then paste the following back into the page:
-
-	```html
-	<apex:page controller="DreamhouseProspects">
-	    <apex:variable var="lightningDesktop" value="{! $User.UIThemeDisplayed == 'Theme4d'}" />
-	    <apex:outputPanel rendered="{! !lightningDesktop}">
-		    <link class="user" href="/sCSS/38.0/sprites/1245343872000/Theme3/default/elements.css" rel="stylesheet" type="text/css" />
-		    <link  href="/sCSS/38.0/sprites/1251310209000/Theme3/dStandard.css" rel="stylesheet" type="text/css" />
-	        <apex:pageBlock >
-	            <apex:sectionHeader title="Leads" subtitle="Home"/>
-	            <apex:form >
-	                <div style="text-align:center;">
-	                    <apex:commandButton action="{!URLFOR($Action.Lead.New)}" value="New"/>
-	                </div>
-	                <apex:outputLabel value="Sort: " for="sortList" />
-	                <apex:selectList value="{! sortOrder}" size="1" id="sortList">
-	                    <apex:selectOption itemvalue="LastName" />
-	                    <apex:selectOption itemvalue="FirstName" />
-	                </apex:selectList>
-	                <apex:commandButton value="Sort Table" action="{!sortList}" reRender="leads_list"/>
-	                <apex:pageBlockTable value="{! leads }" var="ct" id="leads_list">
-	                    <apex:column headerValue="First Name">
-	                        <apex:outputLink value="/{! ct.Id}">{! ct.FirstName }</apex:outputLink>
-	                    </apex:column>
-	                    <apex:column value="{! ct.LastName }"/>
-	                    <apex:column value="{! ct.Email }"/>
-	                    <apex:column value="{! ct.Phone }"/>
-	                </apex:pageBlockTable>              
-	            </apex:form>
-	        </apex:pageBlock>
-	     </apex:outputPanel>
-	</apex:page>
-	```
-
-### Step 2 - Explore the Salesforce Lightning Design System
-
-1. Add a new line after the `</apex:outputPanel>` and before `</apex:page>` tags at the bottom of the page.
-2. Paste the following on the new line:
-
-	```html
-	<apex:outputPanel rendered="{! lightningDesktop}">
+    <apex:outputPanel rendered="{! lightningDesktop}">
         <apex:slds />
         <div class="slds-scope">
-            <apex:form >
-                <div class="slds-page-header">
-                    <div class="slds-grid">
-                    	  <!-- Step 2.5 here -->
-                    	  
-                    </div>
-                </div>
-                <!-- Step 3.1 here -->
-                
-            </apex:form>
+            <div class="slds-page-header">
+                Header goes here
+            </div>
+            Leader table goes here
         </div>
     </apex:outputPanel>
 	```
-3. Navigate to the [Salesforce Lightning Design System](http://getslds.com) site.
-4. Open the Components section and find the Page Headers section.
-5. Paste the following code, which is a piece of the Page Headers component from Salesforce Lightning Design System, inside the `<div class="slds-grid">` on the blank line after the comment `<!-- Step 2.5 here -->`:
+
+1. Save the page.
+
+1. Load the page in **Salesforce Classic**: the page displays with the Salesforce Classic look and feel.
+
+1. Load the page in the **Lightning Experience**: the page displays the basic scaffolding for the Lightning Experience implementation. We will provide the complete implementation in the next steps.
+
+> **Not working as expected?** Check out [this file](https://raw.githubusercontent.com/ccoenraets/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads-2.1.page) to see what the code should look like at this stage. Feel free to cut and paste it in your own page.
+
+### Step 2 - Add the SLDS Header
+
+1. Navigate to the [Salesforce Lightning Design System](http://getslds.com) site. Click **Components** in the side bar, then click **Page Headers**, and familiarize yourself with the markup and styles.
+
+1. Back in the Developer Console, replace the **Header goes here** text with the following code, which is a piece of the Page Header component from Salesforce Lightning Design System:
 
 	```html
-	<div class="slds-col slds-has-flexi-truncate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <div class="slds-media slds-no-space slds-grow">
-        <div class="slds-media__figure">
-          <svg class="slds-icon slds-icon-standard-user" aria-hidden="true">
-            <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#lead')}"></use>
-          </svg> 
+    <div class="slds-grid">
+        <div class="slds-col slds-has-flexi-truncate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="slds-media slds-no-space slds-grow">
+                <div class="slds-media__figure">
+                    <svg class="slds-icon slds-icon-standard-user" aria-hidden="true">
+                        <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#lead')}"></use>
+                    </svg> 
+                </div>
+                <div class="slds-media__body">
+                    <p class="slds-text-title--caps slds-line-height--reset">Record Type</p>
+                    <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="this should match the Record Title">Record Title</h1>
+                </div>
+            </div>
         </div>
-        <div class="slds-media__body">
-          <p class="slds-text-title--caps slds-line-height--reset">Record Type</p>
-          <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="this should match the Record Title">Record Title</h1>
-        </div>
-      </div>
     </div>
 	```
-    
-5. Go back to the Salesforce Lightning Design System site, and locate **Data Tables** in the Components' section.
 
-### Step 3 - Update the Visualforce markup to use a SLDS Data Table
+1. Save the file.
 
-1. Paste the following markup on the blank line following `<!-- Step 3.1 here -->`:
+1. Load the page in the Lightning Experience: the header displays as expected.
+
+### Step 3 - Add the SLDS Data Table
+
+1. Go back to the Salesforce Lightning Design System site. Click **Components** in the side bar, then click **Data Tables**, and familiarize yourself with the markup and styles.
+
+1. Back in the Developer Console, replace the **Leader table goes here** text with the following code:
 
 	```html
 	<apex:pageBlock id="leads_list" >
@@ -138,19 +106,19 @@ title: Modifying the Visualforce Markup for Lightning Experience
                 </tr>
             </thead>
             <tbody>
-                <apex:repeat value="{! leads }" var="ct">
+                <apex:repeat value="{! leads }" var="lead">
                     <tr>
                         <th scope="row" data-label="First Name">
-                            <div class="slds-truncate" title="{! ct.FirstName }"><apex:outputLink value="/{! ct.Id}">{! ct.FirstName }</apex:outputLink></div>
+                            <div class="slds-truncate" title="{! lead.FirstName }"><apex:outputLink value="/{! lead.Id}">{! lead.FirstName }</apex:outputLink></div>
                         </th>
                         <td data-label="Account Name">
-                            <div class="slds-truncate" title="{! ct.LastName }">{! ct.LastName }</div>
+                            <div class="slds-truncate" title="{! lead.LastName }">{! lead.LastName }</div>
                         </td>
                         <td data-label="Email">
-                            <div class="slds-truncate" title="{! ct.Email }">{! ct.Email }</div>
+                            <div class="slds-truncate" title="{! lead.Email }">{! lead.Email }</div>
                         </td>
                         <td data-label="Phone">
-                            <div class="slds-truncate" title="{! ct.Phone }">{! ct.Phone }</div>
+                            <div class="slds-truncate" title="{! lead.Phone }">{! lead.Phone }</div>
                         </td>
                     </tr>
                 </apex:repeat>
@@ -159,14 +127,17 @@ title: Modifying the Visualforce Markup for Lightning Experience
    </apex:pageBlock>
 	```
 
-2. Save the page and reload it in your org.
+1. Save the file and reload the page (in the Lightning Experience). The lead table should display.
 
-### Step 5 - Adding more SLDS styling to the SelectList
+> **Not working as expected?** Check out [this file](https://raw.githubusercontent.com/ccoenraets/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads-2.3.page) to see what the code should look like at this stage. Feel free to cut and paste it in your own page.
+
+### Step 4 (Optional) - Refine the SLDS Header
 
 1. Select the entire `<div class="slds-page-header"> ... </div>` tag and replace it with:
 
 	```html
 	<div class="slds-page-header">
+        <apex:form>
         <div class="slds-grid">
             <div class="slds-col slds-has-flexi-truncate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <div class="slds-media slds-no-space slds-grow">
@@ -200,14 +171,17 @@ title: Modifying the Visualforce Markup for Lightning Experience
                 <apex:commandButton action="{!URLFOR($Action.Lead.New)}" value="New" styleClass="slds-button slds-button--neutral"/>
             </div>
         </div>
+        </apex:form>
    </div>
 	```
 
-2. Save the page and reload the page in your org.
-3. Switch to Salesforce Classic to see the page rendered with the Classic styling.
-4. Switch back to Lightning Experience.
-5. If, for some reason, you were unsuccessful with the exercise delete the entire contents of the page, and replace it with the contents (Select All / Copy) of [this page](https://raw.githubusercontent.com/developerforce/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads.page).
+1. Save the file and reload the page (in the Lightning Experience).
 
+1. Switch to **Salesforce Classic** and click the **Leads** tab: the page loads with the Salesforce Classic look and feel.
+
+1. Switch back to the Lightning Experience.
+
+> **Not working as expected?** Check out [this file](https://raw.githubusercontent.com/ccoenraets/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads-2.4.page) to see what the code should look like at this stage. Feel free to cut and paste it in your own page.
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
