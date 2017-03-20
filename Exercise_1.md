@@ -4,7 +4,7 @@ exercise: Exercise 1
 title: Styling a Visualforce page for Lightning Experience
 ---
 
-### Exercise Goals
+### Objectives
 * Understand how to quickly add the Lightning Experience look and feel to an existing Visualforce page
 * Add SLDS styles to the page
 
