@@ -5,13 +5,13 @@ title: Table of Contents
 
 ### Declarative Exercises
 
-Using clicks, we will enable your org for Lightning and go through the phases of making a Classic Custom App available to your Lightning Users. In these exercises you will learn core Lighting features for your end users, Lightning App development, Record and Home page customizations, standard component usage, and how to assign experiences based on app and profile.
+Using clicks, we will enable your org for Lightning Experience and go through the phases of making a Classic Custom App available to your Lightning Experience users. In these exercises you will learn core Lighting Experience features for your end users, Lightning App development, Record and Home page customizations, standard component usage, and how to assign experiences based on app and profile.
 
 **[Exercise 1](Exercise_d1.html)** - Setup your Salesforce Org
 
-**[Exercise 2](Exercise_d2.html)** - Evaluate Lightning, Create Permission Set & Enable Lightning
+**[Exercise 2](Exercise_d2.html)** - Evaluate Lightning Experience, Create Permission Set & Enable Lightning Experience
 
-**[Exercise 3](Exercise_d3.html)** - Make your Classic App available in Lightning & Explore Lightning Experience
+**[Exercise 3](Exercise_d3.html)** - Make your Classic App available in Lightning Experience & Explore Lightning Experience
 
 **[Exercise 4](Exercise_d4.html)** - Customize Business Processes and Report Charts
 

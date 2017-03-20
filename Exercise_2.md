@@ -11,6 +11,7 @@ In this exercise you will learn how to:
 * Add conditional rendering logic to a page to provide the native look and feel for the UX environment the page is running in  
 * Use the Salesforce Lightning Design System markup and styles
 
+
 ### Step 1 - Add Conditional Logic to the page
 
 1. In the Developer Console, open the **DreamhouseLeads** page.

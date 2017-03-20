@@ -9,6 +9,7 @@ In this exercise you will learn how to:
 * Modify a Lightning page with App Builder
 * Use a Visualforce page as a component in a Lightning page
 
+
 ### Step 1 - Making a Visualforce page available for Lightning pages
 
 1. In Setup, type **visualforce** in the **Quick Find** box.

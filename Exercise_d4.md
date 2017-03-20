@@ -4,7 +4,7 @@ exercise: Exercise 4
 title: Customize Business Processes and Report Charts  (30min)
 ---
 
- We can make Declarative customizations to help manage business processes and analytics and then use the Lightning App Builder to make those customizations visible to our end users in Lightning with Standard Lightning Components. For our Dreamhouse users, we are going to define a process for property status using Path and also modify a chart to add to the property page to help our users work with the property records in our next exercise. 
+ We can make Declarative customizations to help manage business processes and analytics and then use the Lightning App Builder to make those customizations visible to our end users in Lightning Experience with Standard Lightning Components. For our Dreamhouse users, we are going to define a process for property status using Path and also modify a chart to add to the property page to help our users work with the property records in our next exercise. 
 
 ### Path
 

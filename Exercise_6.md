@@ -1,12 +1,12 @@
 ---
 layout: module
 exercise: Exercise 6
-title: Using Components Everywhere
+title: Using Lightning Components Everywhere
 ---
 
 ### Exercise Goals
 
-* Understand how to useLightning Components as Quick Actions
+* Understand how to use Lightning Components as Quick Actions
 * Add Lightning Components to the Utility Bar
 
 ### Step 1 - Add more Lightning Components to the Page
