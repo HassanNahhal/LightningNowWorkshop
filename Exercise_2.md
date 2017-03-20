@@ -23,7 +23,7 @@ In this exercise you will learn how to:
 	<apex:variable var="lightningDesktop" value="{! $User.UIThemeDisplayed=='Theme4d'}" />
 	```
 
-1. Wrap the `<apex:pageBlock>` with the following tag to only render it when the page is running in Salesforce Classic:
+1. Wrap the `<apex:pageBlock>` with the following tag to render it only when the page is running in Salesforce Classic:
 
     ```html
 	<apex:outputPanel rendered="{! !lightningDesktop}"> ... </apex:outputPanel>
@@ -49,7 +49,7 @@ In this exercise you will learn how to:
 
 1. Load the page in the **Lightning Experience**: the page displays the basic scaffolding for the Lightning Experience implementation. We will provide the complete implementation in the next steps.
 
-> **Not working as expected?** Check out [this file](https://raw.githubusercontent.com/ccoenraets/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads-2.1.page) to see what the code should look like at this stage. Feel free to cut and paste in your own page.
+> **Not working as expected?** Check out [this file](https://raw.githubusercontent.com/ccoenraets/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads-2.1.page) to see what the code should look like at this stage. Feel free to cut and paste it in your own page.
 
 ### Step 2 - Add the SLDS Header
 
@@ -128,7 +128,7 @@ In this exercise you will learn how to:
 
 1. Save the file and reload the page (in the Lightning Experience). The lead table should display.
 
-> **Not working as expected?** Check out [this file](https://raw.githubusercontent.com/ccoenraets/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads-2.3.page) to see what the code should look like at this stage. Feel free to cut and paste in your own page.
+> **Not working as expected?** Check out [this file](https://raw.githubusercontent.com/ccoenraets/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads-2.3.page) to see what the code should look like at this stage. Feel free to cut and paste it in your own page.
 
 ### Step 4 (Optional) - Refine the SLDS Header
 
@@ -180,7 +180,7 @@ In this exercise you will learn how to:
 
 1. Switch back to the Lightning Experience.
 
-> **Not working as expected?** Check out [this file](https://raw.githubusercontent.com/ccoenraets/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads-2.4.page) to see what the code should look like at this stage. Feel free to cut and paste in your own page.
+> **Not working as expected?** Check out [this file](https://raw.githubusercontent.com/ccoenraets/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads-2.4.page) to see what the code should look like at this stage. Feel free to cut and paste it in your own page.
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">

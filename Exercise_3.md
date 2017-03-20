@@ -11,8 +11,6 @@ In this exercise you will learn how to:
 
 ### Step 1 - Making a Visualforce page available for Lightning pages
 
-1. Click the Setup menu and choose **Setup Home**.
-
 1. In Setup, type **visualforce** in the **Quick Find** box.
 
 1. Click **Visualforce Pages**.
@@ -29,7 +27,7 @@ In this exercise you will learn how to:
 
 1. Click the Setup menu and choose **Edit Page**.
 
-1. Locate the **Visualforce** Component under **Standard Components**.
+1. Locate the **Visualforce** component under **Standard Components**.
 
 1. Drag the component onto the page and drop it at the top of the right-hand column.
 
@@ -57,8 +55,9 @@ In this exercise you will learn how to:
 
 1. Save the page, then reload the Property Record Detail page.
 
-1. (Optional) Follow the instructions from Step 2 to go back and remove the **Similar Properties** section that you created.
-
+> You could also use the conditional rendering approach covered in exercise 2 
+to make sure the Visualforce page renders with the native look and feel in both Saleforce Classic and the Lightning Experience.
+ 
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">

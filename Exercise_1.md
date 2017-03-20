@@ -8,7 +8,7 @@ title: Styling a Visualforce page for the Lightning Experience
 
 In this exercise you will learn:
 * How to run the same Visualforce page in Salesforce Classic and in the Lightning Experience
-* What are areas of attention when running the same Visualforce page in the two environments
+* What you should pay attention to when running the same Visualforce page in the two environments
 * How to add Salesforce Lightning Design System (SLDS) styles to a Visualforce page
 
 ### Step 1 - Run the Leads Visualforce Page in Salesforce Classic
@@ -25,7 +25,7 @@ In this exercise you will learn:
 
 ### Step 3 - Style the Visualforce Page with the Salesforce Lightning Design System
 
-1. Click on the **Gear** icon (upper right corner) and select **Developer Console**.
+1. Click the **Gear** icon (upper right corner) and select **Developer Console**.
 1. Choose File > Open > Pages, select **DreamhouseLeads**. and click **Open**. Familiarize yourself with the code.
 1. Add the following directive on the line after the opening `<apex:page>` tag to include the Salesforce Lightning Design System (SLDS) style sheet:
 

@@ -6,19 +6,20 @@ title: Creating a "Hello World" Lightning Component
 
 ### Objectives
 
-* Build a simple Hello World component
-* Explore basic concepts of Lightning Component markup
-* Understand how to use attributes for data binding
+In this exercise, you will learn how to:
+* Build a simple Lightning Component
+* Declare attributes and use data binding
+* Retrieve server data in a Lightning Component.
 
 ### Step 1 - Hello World
 
-1. In the Developer Console, choose **New > Lightning Component**.
+1. In the Developer Console, choose **File > New > Lightning Component**.
 
-2. Give the component a name of **HelloWorld**.
+2. Specify **HelloWorld** as the component name.
 
-3. Check the option **Lightning Record Page**.
+3. Check the **Lightning Record Page** checkbox.
 
-4. Add "Hello World" to the component.
+4. Type **Hello World** inside the `<aura:component> ... </aura:component>` tags.
 
 5. Save the file.
 
@@ -26,9 +27,9 @@ title: Creating a "Hello World" Lightning Component
 
 1. Navigate to a Property Record Detail page.
 
-2. Choose **Edit Page** from the Setup menu.
+2. Select **Edit Page** in the Setup menu.
 
-3. Locate your HelloWorld component in the Component List.
+3. Locate the **HelloWorld** component under **Custom Components**.
 
 4. Drag it onto the page and place it at the top of the right-hand column.
 
@@ -36,9 +37,9 @@ title: Creating a "Hello World" Lightning Component
 
 6. Click the Back button in the upper righthand corner of App Builder to return to the Property page.
 
-### Step 3 - Understanding Lightning Component basics
+### Step 3 - Using data binding
 
-1. In the Developer Console, replace the "Hello World" text with:
+1. In the Developer Console, replace the **Hello World** text with:
 
 	```html
 	<aura:attribute name="greeting" type="String" default="World" />
@@ -48,7 +49,7 @@ title: Creating a "Hello World" Lightning Component
 
 1. Save the component and reload the Property Record Detail page.
 
-1. Add the following on a new line under the `<aura:attribute/>` tag:
+1. Add the following input field on a new line under the `<aura:attribute/>` tag:
 
 	```html
     <lightning:input label="Greeting" value="{!v.greeting}"/>
@@ -56,11 +57,11 @@ title: Creating a "Hello World" Lightning Component
 
 1. Save the file and reload the Property Record Detail page.
 
-1. Type a name in the input field.
+1. Type a name in the input field to see data binding in action.
 
 ### Step 4 - Pulling data from Salesforce
 
-1. In the Developer Console, choose **File > New > Apex Class**. Name the file **HelloWorldController**.
+1. In the Developer Console, choose **File > New > Apex Class**. Specify **HelloWorldController** as the controller name and click **OK**.
 
 1. Add `with sharing` to the class definition.
 
@@ -77,15 +78,19 @@ title: Creating a "Hello World" Lightning Component
 	}
     ```
 
-3. Add a reference to the Apex Class in HelloWorld.cmp by adding `controller="HelloWorldController"` to the `<aura:component>` tag.
+3. Go back to the **HelloWorld** component and add `controller="HelloWorldController"` to the `<aura:component>` tag.
 
-4. Add a handler to fire when the component is initialized on the page, by adding the following after the opening `<apex:component>` tag:
+4. Add an `init` event handler right after the **greeting** attribute 
+declaration.
 
 	```html
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 	```
 
-5. Click **Controller** in the sidebar on the right and implement the client-side controller as follows:
+    With this event handler in place, the `doInit()` function of the 
+    component's JavaScript controller will be called when the component is initialized.
+
+5. Click **CONTROLLER** in the sidebar on the right and implement the client-side controller as follows:
 
 	```js
 	({
