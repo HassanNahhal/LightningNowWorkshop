@@ -4,13 +4,13 @@ exercise: Exercise 5
 title: Create New Lightning Console App (45min)
 ---
 
-You can take full advantage of Lightning features by creating a Lightning version of your app. 
+You can take full advantage of Lightning Experience features by creating a Lightning version of your app. 
 
-To create a Lightning app with standard navigation from Setup > App Manager > Upgrade App, but we want to create a new Lightning Console app so we will create a  new app from the App Manager. 
+To create a Lightning app with standard navigation from Setup > App Manager > Upgrade App, but we want to create a new Lightning Console app so we will create a new app from the App Manager. 
 
 Lightning Console apps allow users to edit and reference multiple records at once. When a user chooses a record from a related list, it opens as a tab in the console. When a user opens a related record, it opens as a subtab. Console apps remember tabs, so that when a user navigates away from the page, they don’t lose any time when they come back. 
 
-Console apps in Lightning Experience have much of the same console functionality as Salesforce Classic, such as the three-column layout and pinned tabs, but updated with the styling of Lightning Experience, Utility Bar, Tabs exclusive to Lightning such as Calendar & Notes, and Component powered pages and tabs.
+Console apps in Lightning Experience have much of the same console functionality as Salesforce Classic, such as the three-column layout and pinned tabs, but updated with the styling of Lightning Experience, Utility Bar, Tabs exclusive to Lightning Experience, such as Calendar & Notes, and Component powered pages and tabs.
 
 #### Create New App with App Manager
 
@@ -49,7 +49,7 @@ The utility bar gives your users quick access to common productivity tools, like
 
 #### Finish Building Console App 
 
-Now you can select the items to be included in the Console App. Tabs that are tied to Lightning features like Notes and Calendar are only available when you are creating or editing a Lightning App. So we are able to add additional elements to this app that we could not add earlier to our Classic App. 
+Now you can select the items to be included in the Console App. Tabs that are tied to Lightning Experience features like Notes and Calendar are only available when you are creating or editing a Lightning App. So we are able to add additional elements to this app that we could not add earlier to our Classic App. 
 
 1. Select Items: 
     1. Update Selected Items Column to include: 
@@ -74,7 +74,7 @@ Let's explore the new Lightning Console App! Navigate to the new app in the App 
 
 ### Customize and Assign Property Record Page
 
-Now that we've created our new Lightning Console app, lets take a look at it and customize the experience even more with the Property record page. With Lightning App Builder Admins can create a record page from scratch, or make a copy of an existing record page right. Give your users a customized view for each object’s records by adding, editing, or removing components to change the page’s layout, and you can customize your users’ experience even more granularly by creating custom record pages and assigning them by app, record type, and user profile. We are going to make changes to the Property page using Standard Lightning Components and assign this customized Property Record page to the Lightning Console app we just created. ![screenshot](images/ex5.1.gif)
+Now that we've created our new Lightning Console app, lets take a look at it and customize the experience even more with the Property record page. With Lightning App Builder, Admins can create a record page from scratch, or make a copy of an existing record page right. Give your users a customized view for each object’s records by adding, editing, or removing components to change the page’s layout, and you can customize your users’ experience even more granularly by creating custom record pages and assigning them by app, record type, and user profile. We are going to make changes to the Property page using Standard Lightning Components and assign this customized Property Record page to the Lightning Console app we just created. ![screenshot](images/ex5.1.gif)
 
 1. App Launcher > Dreamhouse Console > Properties Tab (may be a drop-down)
     1. Open a Property Record page
@@ -94,7 +94,7 @@ Now that we've created our new Lightning Console app, lets take a look at it and
     10. To test the page assignment, use App Launcher > Dreamhouse Classic to return to your Classic app. Click into a property record, notice Path is not available on this page. 
 
 
-**Great Job!** With only using clicks you went through the major phases of bringing a Classic app to Lightning Experience. You enabled an existing app and user for Lightning, created a new Lightning app complete with features like Utility Bar, and assigned a customized record page experience to a specific Lightning app.  
+**Great Job!** With only using clicks you went through the major phases of bringing a Classic app to Lightning Experience. You enabled an existing app and user for Lightning Experience, created a new Lightning app complete with features like Utility Bar, and assigned a customized record page experience to a specific Lightning app.  
 
 
 <div class="row" style="margin-top:40px;">
