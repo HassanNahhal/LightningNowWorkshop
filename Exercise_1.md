@@ -5,7 +5,7 @@ title: Styling a Visualforce page for Lightning Experience
 ---
 
 ### Exercise Goals
-* Understand how to quickly add the Lightning look and feel to an existing Visualforce page
+* Understand how to quickly add the Lightning Experience look and feel to an existing Visualforce page
 * Add SLDS styles to the page
 
 ### Step 1 - Examine the Visualforce markup
