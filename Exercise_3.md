@@ -7,7 +7,7 @@ title: Using a Visualforce page in a Lightning Experience page
 ### Exercise Goals
 
 * Modifying a Lightning Experience Record Home Page with App Builder
-* Adding a Visualforce page to an existing Lightning Record Home page
+* Adding a Visualforce page to an existing Lightning Experience Record Home Page
 
 ### Step 1 - Make a Visualforce page available as a Lightning Component
 1. Click the Setup menu and choose **Setup Home**.
