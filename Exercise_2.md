@@ -6,7 +6,7 @@ title: Modifying the Visualforce Markup for Lightning Experience
 
 ### Exercise Goals
 
-* Understand how to modify a page for display in Classic and Lightning Experience
+* Understand how to modify a page for display in Salesforce Classic and Lightning Experience
 * Become familiar with the components and utility classes of the Salesforce Lightning Design System
 * Understand how to use the markup from SLDS in a Visualforce page when rendered in Lightning Experience
 
@@ -205,7 +205,7 @@ title: Modifying the Visualforce Markup for Lightning Experience
 
 2. Save the page and reload the page in your org.
 3. Switch to Salesforce Classic to see the page rendered with the Classic styling.
-4. Switch back to Lightning.
+4. Switch back to Lightning Experience.
 5. If, for some reason, you were unsuccessful with the exercise delete the entire contents of the page, and replace it with the contents (Select All / Copy) of [this page](https://raw.githubusercontent.com/developerforce/LightningNowWorkshop/master/Exercise_2/src/pages/DreamhouseLeads.page).
 
 
