@@ -70,7 +70,7 @@ In this exercise, you will learn how to:
     
     ```html
     <script>
-        $Lightning.use("c:MyApp", function() {
+        $Lightning.use("c:PictureGalleryApp", function() {
             $Lightning.createComponent("c:HelloWorld",
                 {},
                 "greeting",
