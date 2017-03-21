@@ -93,7 +93,7 @@ In this exercise, you will learn how to:
 1. Add the following code just before the closing `</script>` tag to instantiate the **PictureGallery** component.   
     
     ```js
-    $Lightning.use("c:MyApp", function() {
+    $Lightning.use("c:PictureGalleryApp", function() {
         $Lightning.createComponent("c:PictureCarousel",
             {slides: [
                 'https://s3-us-west-1.amazonaws.com/sfdc-demo/houses/living_room.jpg',
