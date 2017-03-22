@@ -1,6 +1,6 @@
 ---
 layout: module
-exercise: Exercise 6
+exercise: Exercise 7
 title: Using Lightning Components Everywhere
 ---
 
@@ -48,7 +48,7 @@ title: Using Lightning Components Everywhere
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="Exercise_5b.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="next.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="Exercise_6.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
+<a href="Exercise_8.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>
