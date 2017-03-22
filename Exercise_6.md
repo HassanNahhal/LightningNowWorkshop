@@ -1,6 +1,6 @@
 ---
 layout: module
-exercise: Exercise 5b
+exercise: Exercise 6
 title: Data Binding with force:recordPreview (Developer Orgs Only)
 ---
 
@@ -263,6 +263,6 @@ title: Data Binding with force:recordPreview (Developer Orgs Only)
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
 <a href="Exercise_5.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="Exercise_6.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="Exercise_7.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>
