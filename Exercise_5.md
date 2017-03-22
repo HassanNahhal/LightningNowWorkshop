@@ -253,6 +253,6 @@ Feel free to check it out or cut and paste it in your own component.
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
 <a href="Exercise_4.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="Exercise_5b.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="Exercise_6.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>
