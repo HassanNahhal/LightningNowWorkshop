@@ -41,7 +41,7 @@ In this exercise you will learn:
 		
 1. Add `styleClass="slds-table slds-table--bordered slds-table--cell-buffer"` to the `<apex:pageBlockTable>` tag. 
 1. Save the page. Go back to the **Leads** tab and refresh the page. You can see that SLDS styles have begun to be applied.
-1. Switch back to **Salesforce Classic** and click the **Leads** tab again. Note that you now have Lightning styles within your Salesforce Classic environment. 
+1. Switch back to **Salesforce Classic** and click the **Leads** tab again. Notice that you now have Lightning styles within your Salesforce Classic environment. 
 We will address that issue in the next exercise.
 
 		
